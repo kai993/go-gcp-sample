@@ -1,14 +1,12 @@
 package main
 
 import (
-	"net/http"
-
-	"github.com/gorilla/mux"
 	"github.com/kai993/go-gcp-sample/gae"
+	"google.golang.org/appengine"
+	"net/http"
 )
 
-func init() {
-	r := mux.NewRouter()
-	r.HandleFunc("/", gae.SayHello)
-	http.Handle("/", r)
+func main() {
+	http.HandleFunc("/", gae.SayHello)
+	appengine.Main()
 }

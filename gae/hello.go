@@ -6,5 +6,5 @@ import (
 )
 
 func SayHello(w http.ResponseWriter, r *http.Request) {
-	fmt.Fprintln(w, "Hello, Golang!")
+	fmt.Fprintln(w, "Hello, GCP!")
 }
